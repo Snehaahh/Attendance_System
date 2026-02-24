@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance - etlab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/faculty-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-flask"></i>
+                <span class="brand-logo">etlab</span>
+            </div>
+            <div class="sidebar-menu">
+                <a href="faculty-dashboard.html" class="menu-item"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="mark-attendance.html" class="menu-item active"><i class="fas fa-clipboard-check"></i> Mark
+                    Attendance</a>
+                <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i
+                        class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <i class="fas fa-flask header-icon"></i>
+                    <span class="header-title">Adi Shankara Institute of Engineering and Technology</span>
+                </div>
+                <div class="header-right">
+                    <span class="user-name" id="username-display"></span>
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <i class="fas fa-bell"></i>
+                    <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i> Mark Attendance
+            </div>
+
+            <div class="content-scroll">
+                <div class="attendance-container">
+                    <!-- Attendance Header -->
+                    <div class="attendance-header">
+                        <h2><i class="fas fa-clipboard-check"></i> Mark Attendance</h2>
+                        <div class="attendance-info">
+                            <div class="info-item">
+                                <label>Date:</label>
+                                <span id="current-date"></span>
+                            </div>
+                            <div class="info-item">
+                                <label>Class:</label>
+                                <select id="class-select" class="form-control">
+                                    <option>S8 - Data Mining</option>
+                                    <option>S8 - Block Chain Technologies</option>
+                                    <option>S8 - Distributed Computing</option>
+                                    <option>S8 - Network Security Protocols</option>
+                                </select>
+                            </div>
+                            <div class="info-item">
+                                <label>Period / Hour:</label>
+                                <select id="hour-select" class="form-control">
+                                    <option value="Period 1">Period 1 (08:50 - 09:45)</option>
+                                    <option value="Period 2">Period 2 (09:45 - 10:40)</option>
+                                    <option value="Period 3">Period 3 (11:00 - 11:50)</option>
+                                    <option value="Period 4">Period 4 (11:50 - 12:40)</option>
+                                    <option value="Period 5">Period 5 (01:30 - 02:20)</option>
+                                    <option value="Period 6">Period 6 (02:20 - 03:10)</option>
+                                    <option value="Period 7">Period 7 (03:10 - 04:00)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Student List -->
+                    <div class="student-list-container">
+                        <div class="list-header">
+                            <h3>Student List</h3>
+                            <div class="attendance-summary">
+                                <span class="summary-item">Total: <strong id="total-students">0</strong></span>
+                                <span class="summary-item">Present: <strong id="present-count">0</strong></span>
+                                <span class="summary-item">Absent: <strong id="absent-count">0</strong></span>
+                            </div>
+                        </div>
+
+                        <table class="attendance-table">
+                            <thead>
+                                <tr>
+                                    <th>Roll No</th>
+                                    <th>Student Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="student-list">
+                                <!-- Students will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="attendance-actions">
+                        <button class="btn-cancel" onclick="window.location.href='faculty-dashboard.html'">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button class="btn-save" onclick="saveAttendance()">
+                            <i class="fas fa-save"></i> Save Attendance
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                © 2025 Etuwa Concepts. All rights reserved
+            </footer>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/attendance.js"></script>
+    <script>
+        // Display username and adjust sidebar
+        window.addEventListener('DOMContentLoaded', function () {
+            const username = sessionStorage.getItem('username');
+            const userType = sessionStorage.getItem('userType');
+            const usernameDisplay = document.getElementById('username-display');
+            const sidebarMenu = document.querySelector('.sidebar-menu');
+
+            if (username && usernameDisplay) {
+                usernameDisplay.textContent = username;
+            }
+
+            // Adjust sidebar based on user type
+            if (userType === 'agent' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="agent-attendance.html" class="menu-item"><i class="fas fa-robot"></i> Automated Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Records</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+                const sidebarHeader = document.querySelector('.sidebar-header');
+                if (sidebarHeader) {
+                    sidebarHeader.innerHTML = '<i class="fas fa-robot"></i> <span class="brand-logo">etlab Agent</span>';
+                }
+            } else if (userType === 'faculty' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="faculty-dashboard.html" class="menu-item"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="mark-attendance.html" class="menu-item active"><i class="fas fa-clipboard-check"></i> Mark Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                    <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                    <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+            }
+
+            // Set current date
+            const dateElement = document.getElementById('current-date');
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = today.toLocaleDateString('en-US', options);
+
+            // Initialize attendance
+            initializeAttendance();
+        });
+    </script>
+</body>
+
+</html>

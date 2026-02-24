@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - etlab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-flask"></i>
+                <span class="brand-logo">etlab</span>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="#" class="menu-item"><i class="fas fa-calendar-check"></i> Attendance</a>
+                <a href="#" class="menu-item"><i class="fas fa-chart-bar"></i> Results</a>
+                <a href="#" class="menu-item"><i class="fas fa-clock"></i> TimeTable</a>
+                <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                <a href="#" class="menu-item"><i class="fas fa-book"></i> Materials</a>
+                <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <i class="fas fa-flask header-icon"></i>
+                    <span class="header-title">Adi Shankara Institute of Engineering and Technology</span>
+                </div>
+                <div class="header-right">
+                    <span class="user-name" id="username-display"></span>
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <i class="fas fa-bell"></i>
+                    <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i> Dashboard
+            </div>
+
+            <div class="content-scroll">
+                <div class="dashboard-container">
+                    <!-- Left Content Area -->
+                    <div class="main-area">
+                        <!-- Vision Section -->
+                        <div class="info-section">
+                            <h3>Vision of the College</h3>
+                            <p>To emerge as a Center of Excellence in Engineering, Technology and Management by
+                                imparting quality education, focussing on empowerment and innovation.</p>
+                        </div>
+
+                        <!-- Mission Section -->
+                        <div class="info-section">
+                            <h3>Mission of the College</h3>
+                            <ul>
+                                <li>Impart quality professional education for total upliftment of the society</li>
+                                <li>Create congenial academic ambience that kindles innovative thinking and research.
+                                </li>
+                                <li>Mould competent professionals who are socially committed and responsible citizens.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Payment Gateway Details -->
+                        <div class="info-section">
+                            <h3>Payment Gateway Details</h3>
+                            <table class="details-table">
+                                <tr>
+                                    <td><strong>Merchant Name</strong></td>
+                                    <td>Adi Shankara Institute of Engineering and Technology</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>Vidya Bharathi Nagar, Mattoor road, Kalady, Ernakulam(Dist), Kerala 683574</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contact Number</strong></td>
+                                    <td>04842463305</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>About Us</strong></td>
+                                    <td><a href="#" class="link">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contact Us</strong></td>
+                                    <td><a href="#" class="link">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Privacy Policy</strong></td>
+                                    <td><a href="#" class="link">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Services</strong></td>
+                                    <td><a href="#" class="link">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Terms and Condition Policy</strong></td>
+                                    <td><a href="#" class="link">View</a></td>
+                                </tr>
+                            </table>
+                            <p class="info-note">Academic Fees, Due, Transport, and Hostel information is accessible
+                                inside the Accounts menu</p>
+                        </div>
+
+                        <!-- Module Grid -->
+                        <div class="module-grid">
+                            <div class="module-card">
+                                <i class="fas fa-user-circle module-icon"></i>
+                                <p>My Profile</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-search module-icon"></i>
+                                <p>Academic Analysis</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-chart-line module-icon"></i>
+                                <p>Results</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-running module-icon"></i>
+                                <p>Activity</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-folder module-icon"></i>
+                                <p>Assignments</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-calendar-check module-icon"></i>
+                                <p>Attendance</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-wallet module-icon"></i>
+                                <p>Accounts</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-file-alt module-icon"></i>
+                                <p>Forms & Templates</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-tv module-icon"></i>
+                                <p>Centralized Info</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-certificate module-icon"></i>
+                                <p>Certificate / Scholarship Request</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-calendar module-icon"></i>
+                                <p>College Calendar</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-bullhorn module-icon"></i>
+                                <p>Circulars</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-users module-icon"></i>
+                                <p>My Clubs</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-eye module-icon"></i>
+                                <p>Department Vision</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-bullseye module-icon"></i>
+                                <p>Department Mission</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-umbrella module-icon"></i>
+                                <p>Duty Leave</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-calendar-alt module-icon"></i>
+                                <p>Exam Schedule</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-question-circle module-icon"></i>
+                                <p>Exam/Quiz</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-exclamation-triangle module-icon"></i>
+                                <p>Grievance</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-id-card module-icon"></i>
+                                <p>Gate Pass</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-book-open module-icon"></i>
+                                <p>Homeworks</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-flask module-icon"></i>
+                                <p>Laboratory</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-video module-icon"></i>
+                                <p>Live</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-clipboard-check module-icon"></i>
+                                <p>Module Test</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-play-circle module-icon"></i>
+                                <p>Online Video Class</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-map-marker-alt module-icon"></i>
+                                <p>Placements</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-chart-pie module-icon"></i>
+                                <p>Program Outcomes</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-question module-icon"></i>
+                                <p>Question Bank</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-comment module-icon"></i>
+                                <p>Remarks</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-user-plus module-icon"></i>
+                                <p>Semester Registration</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-edit module-icon"></i>
+                                <p>Sense Form</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-book module-icon"></i>
+                                <p>Study Materials</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-book-reader module-icon"></i>
+                                <p>Subject</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-user-graduate module-icon"></i>
+                                <p>Subject Registration</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-poll module-icon"></i>
+                                <p>Survey</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-chalkboard-teacher module-icon"></i>
+                                <p>Teacher</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-clock module-icon"></i>
+                                <p>Timetable</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-graduation-cap module-icon"></i>
+                                <p>Tutorials</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-video module-icon"></i>
+                                <p>Video Lectures</p>
+                            </div>
+                            <div class="module-card">
+                                <i class="fas fa-money-bill-wave module-icon"></i>
+                                <p>Wallet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <div class="right-sidebar">
+                        <!-- Calendar Widget -->
+                        <div class="widget calendar-widget">
+                            <div class="widget-header">
+                                <h4>Calendar</h4>
+                            </div>
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <button class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                                    <span class="calendar-month">December 2024</span>
+                                    <button class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="calendar-days">
+                                    <div class="day-name">Su</div>
+                                    <div class="day-name">Mo</div>
+                                    <div class="day-name">Tu</div>
+                                    <div class="day-name">We</div>
+                                    <div class="day-name">Th</div>
+                                    <div class="day-name">Fr</div>
+                                    <div class="day-name">Sa</div>
+                                    <div class="day">1</div>
+                                    <div class="day">2</div>
+                                    <div class="day">3</div>
+                                    <div class="day">4</div>
+                                    <div class="day">5</div>
+                                    <div class="day">6</div>
+                                    <div class="day">7</div>
+                                    <div class="day">8</div>
+                                    <div class="day today">9</div>
+                                    <div class="day">10</div>
+                                    <div class="day">11</div>
+                                    <div class="day">12</div>
+                                    <div class="day">13</div>
+                                    <div class="day">14</div>
+                                    <div class="day">15</div>
+                                    <div class="day">16</div>
+                                    <div class="day">17</div>
+                                    <div class="day">18</div>
+                                    <div class="day">19</div>
+                                    <div class="day">20</div>
+                                    <div class="day">21</div>
+                                    <div class="day">22</div>
+                                    <div class="day">23</div>
+                                    <div class="day">24</div>
+                                    <div class="day">25</div>
+                                    <div class="day">26</div>
+                                    <div class="day">27</div>
+                                    <div class="day">28</div>
+                                    <div class="day">29</div>
+                                    <div class="day">30</div>
+                                    <div class="day">31</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notice Board Widget -->
+                        <div class="widget notice-widget">
+                            <div class="widget-header">
+                                <h4><i class="fas fa-clipboard"></i> Notice Board</h4>
+                                <button class="view-btn">View</button>
+                            </div>
+                            <div class="notice-item">
+                                <div class="notice-date">16 Nov 2023</div>
+                                <div class="notice-title">MODULE 2 QUIZ TEST</div>
+                                <div class="notice-content">ALL SHOULD ATTEMPT SE QUIZ TEST AT 12.00PM ON
+                                    TODAY(16-11-2023)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                Page Generated in 2.82000 seconds &nbsp;&nbsp;&nbsp; © 2025 Etuwa Concepts. All rights reserved
+            </footer>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Display username from sessionStorage and adjust sidebar
+        window.addEventListener('DOMContentLoaded', function () {
+            const username = sessionStorage.getItem('username');
+            const userType = sessionStorage.getItem('userType');
+            const usernameDisplay = document.getElementById('username-display');
+            const sidebarMenu = document.querySelector('.sidebar-menu');
+
+            if (username && usernameDisplay) {
+                usernameDisplay.textContent = username;
+            } else if (usernameDisplay) {
+                usernameDisplay.textContent = 'Guest';
+            }
+
+            // Adjust sidebar based on user type
+            if (userType === 'agent' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="agent-attendance.html" class="menu-item"><i class="fas fa-robot"></i> Automated Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Records</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+                const sidebarHeader = document.querySelector('.sidebar-header');
+                if (sidebarHeader) {
+                    sidebarHeader.innerHTML = '<i class="fas fa-robot"></i> <span class="brand-logo">etlab Agent</span>';
+                }
+            } else if (userType === 'faculty' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="faculty-dashboard.html" class="menu-item"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="mark-attendance.html" class="menu-item"><i class="fas fa-clipboard-check"></i> Mark Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                    <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                    <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

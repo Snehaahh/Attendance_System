@@ -1,0 +1,585 @@
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #004494;
+    --dark-sidebar: #2c3e50;
+    --green-btn: #5cb85c;
+    --accent-color: #ff9800;
+    --text-color: #333;
+    --light-bg: #f5f5f0;
+    --white: #ffffff;
+    --gray: #666;
+    --light-gray: #e0e0e0;
+    --sidebar-width: 220px;
+    --header-height: 50px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* ==================== LOGIN PAGE ==================== */
+.login-body {
+    background-color: #e8e8e8;
+}
+
+.college-header {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.college-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.accreditation-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+}
+
+.login-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.required {
+    color: red;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #f0f8ff;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: white;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--gray);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--green-btn);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: #4cae4c;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* ==================== DASHBOARD LAYOUT ==================== */
+.dashboard-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--dark-sidebar);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.sidebar-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+.sidebar-header i {
+    font-size: 1.3rem;
+}
+
+.sidebar .brand-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+}
+
+.sidebar-menu {
+    flex: 1;
+    padding: 1rem 0;
+    overflow-y: auto;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.menu-item i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--light-bg);
+}
+
+.top-header {
+    height: var(--header-height);
+    background-color: var(--white);
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.header-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.header-right i {
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.logout-link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.logout-link:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb {
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+    border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb i {
+    font-size: 0.75rem;
+    margin: 0 0.3rem;
+}
+
+.content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+}
+
+/* ==================== MAIN AREA ==================== */
+.main-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-section {
+    background: var(--white);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.info-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.info-section p {
+    line-height: 1.6;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.info-section ul {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.details-table td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    font-size: 0.85rem;
+}
+
+.details-table td:first-child {
+    background-color: #f9f9f9;
+    width: 30%;
+}
+
+.link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.info-note {
+    margin-top: 1rem;
+    color: red;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* ==================== MODULE GRID ==================== */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+.module-card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.module-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.module-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.module-card p {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ==================== RIGHT SIDEBAR ==================== */
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.widget {
+    background: var(--white);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.widget-header {
+    background-color: #f9f9f9;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-header h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.view-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Calendar Widget */
+.calendar {
+    padding: 1rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-month {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.calendar-nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+}
+
+.day-name {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray);
+    padding: 0.3rem;
+}
+
+.day {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #e3f2fd;
+}
+
+.day.today {
+    background-color: red;
+    color: white;
+    font-weight: 600;
+}
+
+/* Notice Board Widget */
+.notice-widget {
+    max-height: 400px;
+}
+
+.notice-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.notice-date {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.notice-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.notice-content {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* Footer */
+.dashboard-footer {
+    background-color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .module-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .brand-logo,
+    .menu-item span {
+        display: none;
+    }
+
+    .module-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

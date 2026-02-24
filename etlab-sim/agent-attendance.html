@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Attendance - etlab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/faculty-styles.css">
+    <link rel="stylesheet" href="assets/css/agent-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-robot"></i>
+                <span class="brand-logo">etlab Agent</span>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active"><i class="fas fa-robot"></i> Automated Attendance</a>
+                <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Records</a>
+                <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i
+                        class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <i class="fas fa-robot header-icon"></i>
+                    <span class="header-title">Automated Attendance System</span>
+                </div>
+                <div class="header-right">
+                    <span class="user-name" id="username-display"></span>
+                    <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i> Automated Attendance
+            </div>
+
+            <div class="content-scroll">
+                <div class="attendance-container">
+                    <!-- Agent Info -->
+                    <div class="agent-info-card">
+                        <div class="agent-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="agent-details">
+                            <h2>Automated Attendance Agent</h2>
+                        </div>
+                    </div>
+
+                    <!-- Automation Status -->
+                    <div class="agent-status-card">
+                        <div class="status-indicator active">
+                            <span class="pulse"></span>
+                            <span>Autonomous Mode Active</span>
+                        </div>
+                        <p class="status-note">The agent is monitoring the <code>attendance_records</code> folder for
+                            new CSV files. Metadata (Subject and Period) will be extracted directly from the records.
+                        </p>
+                    </div>
+
+                    <!-- CSV Preview -->
+                    <div class="csv-preview-card" id="csv-preview" style="display: none;">
+                        <h3><i class="fas fa-table"></i> CSV Data Preview</h3>
+                        <div id="csv-table-container"></div>
+                    </div>
+
+                    <!-- Status Messages -->
+                    <div id="status-messages"></div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                © 2025 Etuwa Concepts. All rights reserved | Automated Agent
+            </footer>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/agent.js"></script>
+    <script>
+        // Display username and adjust sidebar
+        window.addEventListener('DOMContentLoaded', function () {
+            const username = sessionStorage.getItem('username');
+            const userType = sessionStorage.getItem('userType');
+            const usernameDisplay = document.getElementById('username-display');
+            const sidebarMenu = document.querySelector('.sidebar-menu');
+
+            if (username && usernameDisplay) {
+                usernameDisplay.textContent = username + ' (Agent)';
+            }
+
+            // Adjust sidebar based on user type
+            if (userType === 'agent' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="agent-attendance.html" class="menu-item active"><i class="fas fa-robot"></i> Automated Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Records</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+                const sidebarHeader = document.querySelector('.sidebar-header');
+                if (sidebarHeader) {
+                    sidebarHeader.innerHTML = '<i class="fas fa-robot"></i> <span class="brand-logo">etlab Agent</span>';
+                }
+            } else if (userType === 'faculty' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="faculty-dashboard.html" class="menu-item"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="mark-attendance.html" class="menu-item"><i class="fas fa-clipboard-check"></i> Mark Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                    <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                    <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

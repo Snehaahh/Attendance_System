@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard - etlab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/faculty-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-flask"></i>
+                <span class="brand-logo">etlab</span>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="mark-attendance.html" class="menu-item"><i class="fas fa-clipboard-check"></i> Mark
+                    Attendance</a>
+                <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i
+                        class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-left">
+                    <i class="fas fa-flask header-icon"></i>
+                    <span class="header-title">Adi Shankara Institute of Engineering and Technology</span>
+                </div>
+                <div class="header-right">
+                    <span class="user-name" id="username-display"></span>
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <i class="fas fa-bell"></i>
+                    <a href="index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </header>
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i> Home <i class="fas fa-chevron-right"></i> Faculty Dashboard
+            </div>
+
+            <div class="content-scroll">
+                <div class="faculty-container">
+                    <!-- Welcome Section -->
+                    <div class="welcome-section">
+                        <h2>Welcome, <span id="faculty-name">Faculty</span>!</h2>
+                        <p>Manage your classes, mark attendance, and track student progress.</p>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions-grid">
+                        <a href="mark-attendance.html" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Mark Attendance</h3>
+                            <p>Take attendance for your classes</p>
+                        </a>
+
+                        <a href="view-attendance.html" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>View Attendance</h3>
+                            <p>Review saved attendance records</p>
+                        </a>
+
+                        <a href="#" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>My Classes</h3>
+                            <p>View your class schedule</p>
+                        </a>
+
+                        <a href="#" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h3>Assignments</h3>
+                            <p>Create and manage assignments</p>
+                        </a>
+
+                        <a href="#" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Results Entry</h3>
+                            <p>Enter student marks and grades</p>
+                        </a>
+
+                        <a href="#" class="action-card">
+                            <div class="card-icon"
+                                style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Student List</h3>
+                            <p>View enrolled students</p>
+                        </a>
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Total Students</h4>
+                                <p class="stat-number">45</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Classes Today</h4>
+                                <p class="stat-number">3</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Pending Tasks</h4>
+                                <p class="stat-number">7</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Avg Attendance</h4>
+                                <p class="stat-number">87%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <i class="fas fa-check-circle" style="color: #43e97b;"></i>
+                                <div class="activity-content">
+                                    <p><strong>Attendance Marked</strong></p>
+                                    <small>S8 - Data Mining • 2 hours ago</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-file-upload" style="color: #4facfe;"></i>
+                                <div class="activity-content">
+                                    <p><strong>Assignment Posted</strong></p>
+                                    <small>Algorithm Analysis Assignment • Yesterday</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <i class="fas fa-star" style="color: #fee140;"></i>
+                                <div class="activity-content">
+                                    <p><strong>Results Published</strong></p>
+                                    <small>Mid-term Exam Results • 2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                Page Generated in 1.52000 seconds &nbsp;&nbsp;&nbsp; © 2025 Etuwa Concepts. All rights reserved
+            </footer>
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Display username from sessionStorage and adjust sidebar
+        window.addEventListener('DOMContentLoaded', function () {
+            const username = sessionStorage.getItem('username');
+            const userType = sessionStorage.getItem('userType');
+            const usernameDisplay = document.getElementById('username-display');
+            const facultyName = document.getElementById('faculty-name');
+            const sidebarMenu = document.querySelector('.sidebar-menu');
+
+            if (username) {
+                if (usernameDisplay) usernameDisplay.textContent = username;
+                if (facultyName) facultyName.textContent = username;
+            }
+
+            // Adjust sidebar based on user type
+            if (userType === 'agent' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="agent-attendance.html" class="menu-item"><i class="fas fa-robot"></i> Automated Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Records</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+                const sidebarHeader = document.querySelector('.sidebar-header');
+                if (sidebarHeader) {
+                    sidebarHeader.innerHTML = '<i class="fas fa-robot"></i> <span class="brand-logo">etlab Agent</span>';
+                }
+            } else if (userType === 'faculty' && sidebarMenu) {
+                sidebarMenu.innerHTML = `
+                    <a href="faculty-dashboard.html" class="menu-item active"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="mark-attendance.html" class="menu-item"><i class="fas fa-clipboard-check"></i> Mark Attendance</a>
+                    <a href="view-attendance.html" class="menu-item"><i class="fas fa-eye"></i> View Attendance</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chalkboard-teacher"></i> My Classes</a>
+                    <a href="#" class="menu-item"><i class="fas fa-tasks"></i> Assignments</a>
+                    <a href="#" class="menu-item"><i class="fas fa-chart-line"></i> Results Entry</a>
+                    <a href="#" class="menu-item"><i class="fas fa-file-alt"></i> User Manual</a>
+                    <a href="index.html" class="menu-item" style="color: #dc3545; margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

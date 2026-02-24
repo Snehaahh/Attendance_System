@@ -1,0 +1,514 @@
+[
+  {
+    "id": 1771610919788,
+    "date": "2026-02-20T18:08:39.787Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - Data Mining",
+    "hour": "3",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 4,
+      "absent": 6
+    }
+  },
+  {
+    "id": 1771569770457,
+    "date": "2026-02-20T06:42:50.457Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - Data Mining",
+    "hour": "2",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 4,
+      "absent": 6
+    }
+  },
+  {
+    "id": 1771568891865,
+    "date": "2026-02-20T06:28:11.865Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - NSP",
+    "hour": "1",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 4,
+      "absent": 6
+    }
+  },
+  {
+    "id": 1767087321122,
+    "date": "2025-12-30T09:35:21.121Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - Data Mining",
+    "hour": "1",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 5,
+      "absent": 5
+    }
+  },
+  {
+    "id": 1767071947151,
+    "date": "2025-12-30T05:19:07.151Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - Data Mining",
+    "hour": "5",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 5,
+      "absent": 5
+    }
+  },
+  {
+    "id": 1767039437188,
+    "date": "2025-12-29T20:17:17.188Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "S8 - Data Mining",
+    "hour": "4",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 5,
+      "absent": 5
+    }
+  },
+  {
+    "id": 1767038664941,
+    "date": "2025-12-29T20:04:24.941Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "Data Mining",
+    "hour": "4",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 5,
+      "absent": 5
+    }
+  },
+  {
+    "id": 1767038641857,
+    "date": "2025-12-29T20:04:01.856Z",
+    "faculty": "AGENT001 (Automated)",
+    "class": "Data Mining",
+    "hour": "4",
+    "students": [
+      {
+        "rollNo": "22BCS201",
+        "name": "Nafeesathul Misriya K S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS202",
+        "name": "Nazmiya A N",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS203",
+        "name": "Rishfana E A",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS204",
+        "name": "Saniya E S",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS205",
+        "name": "Sanjaly Krishna",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS206",
+        "name": "Sanjana Krishna",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS207",
+        "name": "Seethal Vijayan",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS208",
+        "name": "Shivaranjini R",
+        "status": "absent"
+      },
+      {
+        "rollNo": "22BCS209",
+        "name": "Sivaranjini N",
+        "status": "present"
+      },
+      {
+        "rollNo": "22BCS210",
+        "name": "Snehamol K M",
+        "status": "absent"
+      }
+    ],
+    "summary": {
+      "total": 10,
+      "present": 5,
+      "absent": 5
+    }
+  }
+]
